@@ -59,9 +59,12 @@
   transition: transform .3s;
 }
 
-.my-border:hover::before{
-  transform: scaleX(1);
+@media screen and (min-width:1024px) {
+  .my-border:hover::before{
+    transform: scaleX(1);
+  }
 }
+
 
   .active span:nth-child(1){
       animation: ease .7s top forwards;
