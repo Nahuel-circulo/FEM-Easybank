@@ -1,24 +1,26 @@
 
 
 <nav class="bg-white " >
-  <div class="flex justify-between relative  p-6">
-    <img src="/logo.svg" alt="Easybank">
-    <div id="nav-items" class="fixed transition-[left] duration-500 right-0 left-full top-20  mt-4 mx-auto p-4 rounded-md bg-white w-[80%]">
-      <div class="flex flex-col text-lg justify-center items-center p-4 gap-4">
-
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-        <a href="#">Blog</a>
-        <a href="#">Careers</a>
+  <div class="flex justify-between items-center container mx-auto relative  p-6 lg:p-4">
+    <img src="/logo.svg" alt="Easybank" class="" width="175px">
+    <div id="nav-items" class="fixed lg:static  transition-[left] ease-out duration-500 right-0 left-full top-20  mt-4 lg:mt-0 mx-auto p-4 rounded-md bg-white w-[80%] lg:w-auto">
+      <div class="flex flex-col lg:flex-row text-lg justify-center items-center p-4 lg:p-0 gap-4 lg:gap-8">
+        <a href="#" class="relative text-grayish-blue transition-colors hover:text-black px-1 text-center my-border before:bg-gradient-to-l before:to-lime-green before:from-bright-cyan">Home</a>
+        <a href="#" class="relative text-grayish-blue transition-colors hover:text-black px-1 text-center my-border before:bg-gradient-to-l before:to-lime-green before:from-bright-cyan">About</a>
+        <a href="#" class="relative text-grayish-blue transition-colors hover:text-black px-1 text-center my-border before:bg-gradient-to-l before:to-lime-green before:from-bright-cyan">Contact</a>
+        <a href="#" class="relative text-grayish-blue transition-colors hover:text-black px-1 text-center my-border before:bg-gradient-to-l before:to-lime-green before:from-bright-cyan">Blog</a>
+        <a href="#" class="relative text-grayish-blue transition-colors hover:text-black px-1 text-center my-border before:bg-gradient-to-l before:to-lime-green before:from-bright-cyan">Careers</a>
       </div>
     </div>
     
-    <button class="w-7" id="menu-btn">
+    <button class="w-7 lg:hidden" id="menu-btn">
+      <span class="rounded-sm h-[3px] w-full transition-all relative my-1 block bg-lime-green"></span>
       <span class="rounded-sm h-[3px] w-full transition-all relative my-1 block bg-bright-cyan"></span>
-    <span class="rounded-sm h-[3px] w-full transition-all relative my-1 block bg-lime-green"></span>
-    <span class="rounded-sm h-[3px] w-full transition-all relative my-1 block bg-bright-cyan"></span>
-  </button>
+      <span class="rounded-sm h-[3px] w-full transition-all relative my-1 block bg-lime-green"></span>
+    </button>
+    <button class="hidden lg:block bg-gradient-to-l text-white hover:opacity-70 transition-opacity py-3 px-8 rounded-full to-lime-green from-bright-cyan">
+      Request Invite
+    </button>
 </div>
 </nav>
 
@@ -44,6 +46,23 @@
 </script>
 
 <style>
+
+
+.my-border::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+  transform: scaleX(0);
+  height: 5px;
+  bottom: calc(-100% - 4px);
+  transition: transform .3s;
+}
+
+.my-border:hover::before{
+  transform: scaleX(1);
+}
+
   .active span:nth-child(1){
       animation: ease .7s top forwards;
   }
