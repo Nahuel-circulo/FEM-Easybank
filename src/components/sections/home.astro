@@ -1,0 +1,15 @@
+---
+import {Image} from 'astro:assets';
+---
+<section class="  bg-white md:pt-[74px] pb-10  lg:pb-0   overflow-y-visible   items-center grid md:grid-cols-2">
+  <div class="md:col-start-2 md:row-start-1 overflow-x-clip bg-left relative   lg:bg-left-top bg-cover px-6 md:bg-[url('/images/backgrounds/bg-intro-desktop.svg')] bg-[url('/images/backgrounds/bg-intro-mobile.svg')]">
+    <Image class="w-full relative -top-10 md:scale-110  md:top-14 md:left-10 lg:max-w-xl xl:left-1/4  lg:scale-125 lg:left-10" src='/images/image-mockups.png' alt="mockup" width="500" height="400" loading="lazy"/>
+  </div>
+  <div class="md:col-start-1 md:row-start-1 lg:max-w-xl justify-self-center px-8 text-center md:text-start">
+    <h1 class="text-4xl lg:text-5xl text-dark-blue">Next generation digital banking</h1>
+    <p class="text-grayish-blue my-6 lg:text-xl xl:py-4">Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.</p>
+    <button class=" bg-gradient-to-l text-white hover:opacity-70 transition-opacity py-3 px-8 rounded-full to-lime-green from-bright-cyan">
+      Request Invite
+    </button>
+  </div>
+</section>
