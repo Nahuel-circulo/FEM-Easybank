@@ -7,20 +7,25 @@ const items = [
   ]
 ---
 
-<section class="bg-very-light-gray p-8 grid gap-4">
+<section class="bg-very-light-gray   p-8 lg:py-16 grid gap-4 ">
 
-  <h2 class="text-dark-blue  text-4xl text-center">Why choose Easybank?</h2>
-  <p class="text-grayish-blue text-center">
-    We leverage Banking to turn your bank account into your financial hub. Control your finances like never before.
-  </p>
+  <div class="container mx-auto p-6 lg:px-0">
 
-  <div class="py-8 grid gap-8">
-    {items.map((item)=>(
-      <div class="flex flex-col gap-4 justify-center items-center">
-        <img src={item.image} alt={item.title}>
-        <h4 class="text-dark-blue text-xl">{item.title}</h4>
-        <p class="text-center text-grayish-blue">{item.content}</p>
-      </div>
-    ))}
+    <div class="max-w-md mx-auto lg:max-w-xl text-center lg:text-left lg:mx-0 flex flex-col gap-4">
+      <h2 class="text-dark-blue  text-3xl lg:text-4xl">Why choose Easybank?</h2>
+      <p class="text-grayish-blue  lg:text-lg lg:py-3">
+        We leverage Banking to turn your bank account into your financial hub. Control your finances like never before.
+      </p>
+    </div>
+    
+    <div class="py-8  grid lg:py-16 gap-8 max-w-md mx-auto lg:mx-0 lg:grid-cols-4 lg:max-w-none">
+      {items.map((item)=>(
+        <div class="flex flex-col gap-4 text-center lg:text-left justify-center lg:items-start items-center">
+          <img src={item.image} alt={item.title}>
+          <h4 class="text-dark-blue text-xl xl:text-2xl">{item.title}</h4>
+          <p class=" text-grayish-blue xl:text-base lg:max-w-md">{item.content}</p>
+          </div>
+          ))}
+          </div>
   </div>
 </section>
