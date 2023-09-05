@@ -1,0 +1,33 @@
+---
+import { Image } from "astro:assets";
+const articles = [
+  {image:'/images/image-currency.jpg',autor:'Claire Robinson',title:'Receive money in any currency with no fees',description:"The world is getting smaller and we're becoming more mobile. So why should you be forced to only receive money in a single..."},
+  {image:'/images/image-restaurant.jpg',autor:'Wilson Hutton',title:'Treat yourself without worrying about money',description:'Our simpe budfeting feature allows you to separate out your spending and set realistics limits each month. That means you...'},
+  {image:'/images/image-plane.jpg',autor:'Wilson Hutton',title:"Take your Easybank card wherever you go",description:" We want you to enjoy your travels. This is why we don't char any fees on purchase while you're abroad. We'll even show you..."},
+  {image:'/images/image-confetti.jpg',autor:'Claire Robinson',title:'Our invite-only Beta accounts are now live!',description:"After a lot of hard work by the whole ream, we're exited to launch our closed beta. It's easy to request an invite through the site..."},
+]
+---
+
+<section class="bg-[#fafafa] p-8">
+
+  <div class="container mx-auto">
+    <h2 class="text-dark-blue text-center my-8 text-3xl lg:text-4xl">Letest Articles</h2>
+    <div class="grid gap-8">
+      {
+        articles.map((article)=>(
+
+          <article class="rounded-md overflow-hidden bg-white">
+            <Image src={article.image} alt={article.title} width={400} height={350}/>
+            <div class="p-8 flex flex-col gap-2">
+              <span class="text-grayish-blue text-xs">By {article.autor}</span>
+              <p class="text-dark-blue">{article.title}</p>
+              <p class="text-grayish-blue text-sm">{article.description}</p>  
+            </div>
+            </article>
+      ))}
+    </div>
+  </div>
+
+
+
+</section>
