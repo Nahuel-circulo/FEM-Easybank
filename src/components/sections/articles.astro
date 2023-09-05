@@ -8,20 +8,20 @@ const articles = [
 ]
 ---
 
-<section class="bg-[#fafafa] p-8">
+<section class="bg-[#fafafa] p-8 lg:py-12 ">
 
   <div class="container mx-auto">
-    <h2 class="text-dark-blue text-center my-8 text-3xl lg:text-4xl">Letest Articles</h2>
-    <div class="grid gap-8">
+    <h2 class="text-dark-blue text-center lg:text-left lg:my-14 my-8 text-3xl lg:text-4xl">Letest Articles</h2>
+    <div class="grid gap-8 xl:gap-12 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {
         articles.map((article)=>(
 
-          <article class="rounded-md overflow-hidden bg-white">
-            <Image src={article.image} alt={article.title} width={400} height={350}/>
+          <article class="rounded-md max-w-sm md:max-w-xs mx-auto overflow-hidden bg-white">
+            <Image src={article.image} alt={article.title} width={400} height={350} class="w-full aspect-[4/3]"/>
             <div class="p-8 flex flex-col gap-2">
               <span class="text-grayish-blue text-xs">By {article.autor}</span>
-              <p class="text-dark-blue">{article.title}</p>
-              <p class="text-grayish-blue text-sm">{article.description}</p>  
+              <p class="text-dark-blue xl:text-lg ">{article.title}</p>
+              <p class="text-grayish-blue text-sm ">{article.description}</p>  
             </div>
             </article>
       ))}
